@@ -1,0 +1,31 @@
+#twtline * {
+	margin: 0;
+	padding: 0;
+}
+
+#twtline table {
+    height: 2.5em;
+	vertical-align: middle;
+	border: 1px solid #e8e8e8;
+}
+
+#twtline li {
+	list-style-type:none;
+}
+	
+#twtline #twtLogo {
+	width: 24px;
+	height: 24px;
+	padding: 0 10px 0 5px;
+}
+
+#twtLogo img {
+    border: none;
+}
+
+#twtline #twtEntries {
+	color: #222;
+    text-decoration: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 0.8em;
+}
