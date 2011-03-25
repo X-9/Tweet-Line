@@ -20,12 +20,14 @@ function TwitterClient(params) {
 
 	this.Append = function(data) {
 		$.each(data, function(_, item) {
-				$(self.twits).append($('<li style="display: none">' + item.text + '</li>'));
+				$(self.twits).append($('<li style="display: none">' + 
+					item.text.replace(/\s+#(\w+)/ig, ' <a href="http://twitter.com/#!/search?q=%23$1">#$1</a>') + 
+					'</li>'));
 		});
 		
 		$(self.htmlObject).append('<table border="0" cellpadding="0" cellspacing="0" width="100%">' +
 								  '<tr><td id="twtLogo"><a href="http://twitter.com/' + self.feedName + '">' +
-								  '<img src="bird.png" /></a></td><td id="twtEntries"></td></tr></table>');
+								  '<img src="./bird.png" /></a></td><td id="twtEntries"></td></tr></table>');
 		
 		$("#twtEntries").append(self.twits);
 
